@@ -14,16 +14,14 @@ window.title('project CSCI102')
 window.resizable(False, False)
 
 # #the window size + to keep it in center:   
-# window_width = 500
-# window_height = 500
-# screen_width = window.winfo_screenwidth()
-# screen_height = window.winfo_screenheight() 
-# center_x = int(screen_width/2 - window_width / 2)
-# center_y = int(screen_height/2 - window_height / 2)
-# window.geometry(f'{window_width}x{window_height}+{center_x}+{center_y}')
+window_width = 500
+window_height = 500
+screen_width = window.winfo_screenwidth()
+screen_height = window.winfo_screenheight() 
+center_x = int(screen_width/2 - window_width / 2)
+center_y = int(screen_height/2 - window_height / 2)
+window.geometry(f'{window_width}x{window_height}+{center_x}+{center_y}')
 window.geometry("500x500+420+100") 
-## 500x500= dimensions of the window (first 500= width, second 500 = height)
-### 420+100 = position (420=width, 100=height)
 
 # ##===============================================================================
 # #sound automatically
@@ -75,13 +73,13 @@ def open(e):
             super().__init__() ### The super() function in Python makes class inheritance more manageable and extensible. 
             #The function returns a temporary object that allows reference to a parent class by the keyword super.
 
-            # # root_width = 500
-            # root_height = 500
-            # screen_width = survey.winfo_screenwidth()
-            # screen_height = survey.winfo_screenheight() 
-            # center_x = int(screen_width/2 - root_width / 2)
-            # center_y = int(screen_height/2 - root_height / 2)
-            # survey.geometry(f'{root_width}x{root_height}+{center_x}+{center_y}')
+            root_width = 500
+            root_height = 500
+            screen_width = survey.winfo_screenwidth()
+            screen_height = survey.winfo_screenheight() 
+            center_x = int(screen_width/2 - root_width / 2)
+            center_y = int(screen_height/2 - root_height / 2)
+            survey.geometry(f'{root_width}x{root_height}+{center_x}+{center_y}')
 
             survey.geometry("500x500+420+100") 
             ## 500x500= dimensions of the window (first 500= width, second 500 = height)
@@ -170,13 +168,13 @@ def open(e):
             root = Tk()
             root.title('Final Result')
             root.resizable(False, False)
-            # root_width = 500
-            # root_height = 500
-            # screen_width = survey.winfo_screenwidth()
-            # screen_height = survey.winfo_screenheight() 
-            # center_x = int(screen_width/2 - root_width / 2)
-            # center_y = int(screen_height/2 - root_height / 2)
-            # survey.geometry(f'{root_width}x{root_height}+{center_x}+{center_y}')
+            root_width = 500
+            root_height = 500
+            screen_width = survey.winfo_screenwidth()
+            screen_height = survey.winfo_screenheight() 
+            center_x = int(screen_width/2 - root_width / 2)
+            center_y = int(screen_height/2 - root_height / 2)
+            survey.geometry(f'{root_width}x{root_height}+{center_x}+{center_y}')
 
             root.geometry("500x500+420+100") 
             ## 500x500= dimensions of the window (first 500= width, second 500 = height)
@@ -214,18 +212,18 @@ def open(e):
             label_poster.pack(anchor='s', side=LEFT, padx=160, pady=90)
 
             #####TRANSPARENT CODE!!!!
-            # images=[]
-            # def create_rectangle(x,y,a,b,**options):
-            #     if 'alpha' in options:
-            #             # Calculate the alpha transparency for every color(RGB)
-            #             alpha = int(options.pop('alpha') * 255)
-            #             # Use the fill variable to fill the shape with transparent color
-            #             fill = options.pop('fill')
-            #             fill = root.winfo_rgb(fill) + (alpha,)
-            #             image = Image.new('RGBA', (a-x, b-y), fill)
-            #             images.append(ImageTk.PhotoImage(image))
-            #             root_canvas.create_image(x, y, image=images[-1], anchor='nw')
-            #             root_canvas.create_rectangle(x, y,a,b, **options)
+            images=[]
+            def create_rectangle(x,y,a,b,**options):
+                 if 'alpha' in options:
+                         # Calculate the alpha transparency for every color(RGB)
+                         alpha = int(options.pop('alpha') * 255)
+                         # Use the fill variable to fill the shape with transparent color
+                         fill = options.pop('fill')
+                         fill = root.winfo_rgb(fill) + (alpha,)
+                         image = Image.new('RGBA', (a-x, b-y), fill)
+                         images.append(ImageTk.PhotoImage(image))
+                         root_canvas.create_image(x, y, image=images[-1], anchor='nw')
+                         root_canvas.create_rectangle(x, y,a,b, **options)
             
             def change_tryagain(e):
                 mypath=os.path.dirname(os.path.realpath(__file__))
