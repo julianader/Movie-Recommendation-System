@@ -1,0 +1,12 @@
+1. personality questions:
+how are you feeling today?
+(Happy - neutral - sad)
+
+2. What comes closest to your occasion? 
+(By Myself - Date - Movie Night with friends - Watching a movie with family or relatives)
+
+3. Please choose any genre you're interested in.
+(action - romance - comedy - horror)
+
+4. How old would you like the movie to be?
+(Doesn't matter - Published in 2020 or 2021. - Published in the last 5 years - Published in the last 15 years.)
